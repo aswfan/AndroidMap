@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:headerAttr="http://schemas.android.com/apk/res/com.example.bjmap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:id="@+id/background" >
+     
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="160dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/progress"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+	<RelativeLayout 
+	    android:id="@+id/titleLayout"
+	    android:layout_width="fill_parent"
+    	android:layout_height="70dp"
+    	android:background="@drawable/border">
+	    <components.Header
+	        android:id="@+id/header"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_marginTop="13dp"
+	        headerAttr:myTitle="系统提问"
+	        headerAttr:myTitleSize="12sp"
+	        headerAttr:myTitleColor="#000000"
+	        headerAttr:rightBackground="#00000000"
+	        headerAttr:rightText="退出"
+	        headerAttr:rightTextColor="#000000"/>
+	</RelativeLayout>
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/titleLayout"
+	    android:id="@+id/content"
+	    >
+	    <FrameLayout 
+	        android:id="@+id/fragment"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        />
+	    <Button
+	   	    android:id="@+id/nextBtn"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:text="下一步"
+	   	    android:visibility="invisible"/>
+	</RelativeLayout>
+    
+	
+</RelativeLayout>

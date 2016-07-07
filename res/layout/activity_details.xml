@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}"
+    xmlns:headerAttr="http://schemas.android.com/apk/res/com.example.bjmap"
+    android:id="@+id/background" >
+
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="160dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/progress"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/hello_world" />
+    
+    <RelativeLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="70dp"
+    	android:background="@drawable/border"
+    	android:layout_above="@id/web"
+    	android:layout_marginBottom="-70dp">
+	    <components.Header
+	        android:id="@+id/myHeader"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_marginTop="13dp"
+	        headerAttr:myTitle="详细信息展示"
+	        headerAttr:myTitleSize="12sp"
+	        headerAttr:myTitleColor="#000000"
+	        headerAttr:leftBackground="#00000000"
+	        headerAttr:leftSrc="@drawable/back"/>
+	</RelativeLayout>
+    <RelativeLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/border"
+    	android:layout_below="@id/web"
+    	android:layout_marginTop="-50dp">
+	    <recommend.MyBoard 
+	        android:id="@+id/board"
+	        android:layout_width="fill_parent"
+    		android:layout_height="wrap_content">
+	    </recommend.MyBoard>
+	</RelativeLayout>
+
+</RelativeLayout>

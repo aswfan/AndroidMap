@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="headerAttr">
+        <attr name="myTitle" format="string"/>
+        <attr name="myTitleSize" format="dimension"/>
+        <attr name="myTitleColor" format="color"/>
+        <attr name="leftBackground" format="color|reference"/>
+        <attr name="leftSrc" format="color|reference"/>
+        <attr name="rightBackground" format="color|reference"/>
+        <attr name="rightTextColor" format="color"/>
+        <attr name="rightText" format="string"/>
+    </declare-styleable>
+    
+    <string-array name="date">
+     <item>请选择</item>
+     <item>1-3月</item>  
+     <item>4-6月</item>
+     <item>7-9月</item>
+     <item>10-12月</item>
+    </string-array>
+    <string-array name="days">
+     <item>请选择</item>
+     <item>1-3天</item>  
+     <item>4-7天</item>
+     <item>8-10天</item>
+     <item>11-15天</item>
+     <item>>15天</item>
+    </string-array>
+    <string-array name="people">
+     <item>请选择</item>
+     <item>独自一人</item>  
+     <item>三五好友</item>
+     <item>亲子</item>
+     <item>家庭</item>
+     <item>情侣</item>
+     <item>闺蜜</item>
+    </string-array>
+    <string-array name="fee">
+     <item>请选择</item>
+     <item>0~999</item>  
+     <item>1000~2999</item>
+     <item>3000~4999</item>
+     <item>5000~9999</item>
+     <item>>10000</item>
+    </string-array>
+    <string-array name="type">
+     <item>请选择</item>
+     <item>蜜月</item>  
+     <item>购物</item>
+     <item>美食</item>
+     <item>海滨</item>
+     <item>古镇</item>
+     <item>自驾</item>
+     <item>骑行</item>
+     <item>游轮</item>
+     <item>毕业游</item>
+     <item>周末游</item>
+    </string-array>
+</resources>

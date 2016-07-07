@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:headerAttr="http://schemas.android.com/apk/res/com.example.bjmap"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:id="@+id/background"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/progress"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/titleLayout"
+	    android:layout_width="fill_parent"
+    	android:layout_height="70dp"
+    	android:background="@drawable/border">
+	    <components.Header
+	        android:id="@+id/header"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_marginTop="13dp"
+	        headerAttr:myTitle="兴趣识别"
+	        headerAttr:myTitleSize="12sp"
+	        headerAttr:myTitleColor="#000000"
+	        headerAttr:leftBackground="#00000000"
+	        headerAttr:leftSrc="@drawable/back"/>
+	</RelativeLayout>
+	<RelativeLayout 
+	    android:layout_marginTop="20dp"
+	    android:layout_marginBottom="20dp"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/titleLayout"
+    	android:id="@+id/preference">
+	    <TextView
+	        android:id="@+id/like"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="想去的地点"
+	        android:textSize="20sp"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="#000000" />
+	    <EditText
+	       	android:id="@+id/input_like"
+	        android:layout_width="490dp"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:hint="点击输入相应地点"
+	        android:lines="3"
+	        android:background="@drawable/border"
+	        android:focusable="false"
+	        android:layout_below="@id/like"
+	        android:layout_marginRight="10dp"
+		    android:layout_marginLeft="10dp" 
+		    android:layout_marginBottom="20dp"
+	         />
+	    <TextView
+	        android:layout_below="@id/input_like"
+	        android:id="@+id/dislike"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="不想去的地点"
+	        android:textSize="20sp"
+	        android:layout_marginBottom="10dp"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="#000000" />
+	    <EditText 
+	        android:layout_below="@id/dislike"
+	       	android:id="@+id/input_dislike"
+	        android:layout_width="490dp"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:hint="点击输入相应地点"
+	        android:layout_marginBottom="10dp"
+	        android:lines="3"
+	        android:background="@drawable/border"
+	        android:layout_marginLeft="10dp"
+	        android:focusable="false"
+	        android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	<Button
+	    android:layout_below="@id/preference"
+	    android:id="@+id/next_1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="下一步"
+	    android:textSize="15sp"/>
+
+</RelativeLayout>

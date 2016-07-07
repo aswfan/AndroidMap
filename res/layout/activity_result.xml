@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:headerAttr="http://schemas.android.com/apk/res/com.example.bjmap"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/hello_world" />
+    
+    <RelativeLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="70dp"
+    	android:background="@drawable/border"
+    	android:layout_above="@id/web"
+    	android:layout_marginBottom="-70dp">
+	    <components.Header
+	        android:id="@+id/myHeader"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:layout_marginTop="13dp"
+	        headerAttr:myTitle="详细信息展示"
+	        headerAttr:myTitleSize="12sp"
+	        headerAttr:myTitleColor="#808080bf"
+	        headerAttr:leftBackground="#00000000"
+	        headerAttr:leftSrc="@drawable/back"/>
+	</RelativeLayout>
+    <RelativeLayout 
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/border"
+    	android:layout_below="@id/web"
+    	android:layout_marginTop="-50dp">
+	    <search.MyBoard 
+	        android:id="@+id/board"
+	        android:layout_width="fill_parent"
+    		android:layout_height="wrap_content">
+	    </search.MyBoard>
+	</RelativeLayout>
+
+</RelativeLayout>
